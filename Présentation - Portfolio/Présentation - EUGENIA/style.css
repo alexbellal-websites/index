@@ -1,0 +1,297 @@
+:root {
+    --text-color: rgb(255, 255, 255);
+    /* --bg-color: #396dfe ; */
+    --bg-color: linear-gradient(180deg,#041543 10%, #396dfe 30%) ;
+    --highlight: #5a63d2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent horizontal overflow */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Menu */
+body {
+    height: 100%;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    /* background: white; */
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu li {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease-in;
+}
+
+.menu li:hover {
+    text-shadow: 0px 0px 5px rgb(109, 153, 255);
+    transform: translateY(-3px);
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    /* border: 1px solid black; */
+}
+
+.menu a:hover {
+    transform: translateY(-3px);
+}
+
+.logo {
+    max-width: 40px;
+}
+
+.logo-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-btn {
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.menu-btn:hover {
+    background: var(--highlight);
+}
+
+.menu-btn a:hover {
+    color: white;
+}
+
+/* HERO */
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content properly */
+    align-items: center;
+    min-height: 130vh; /* Ensure it fills the full viewport height */
+    position: relative;
+    overflow: hidden; /* Prevents overflow issues */
+}
+
+
+.hero-logo {
+    max-width: 70%;
+    z-index: 1000;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* filter: brightness(1.03); */
+    transform: translate(-50%, -60%); /* Centering */
+    will-change: transform; /* Optimizes rendering */
+    display: block; /* Ensures it's not hidden */
+    /* animation: heroFade 2s ease-in-out forwards; */
+
+}
+/* 
+@keyframes heroFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+} */
+
+#particle-bg {
+    position: absolute;
+    top: 0;
+    width: 100%; /* Ensure it doesn't exceed viewport */
+    /* opacity: 0;
+    animation: starFade 2s ease-in-out forwards; */
+}
+
+/* @keyframes starFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+} */
+
+.cloud1 {
+    width: 105%;
+    position: absolute;
+    bottom: -50px;
+    z-index: 1001;
+    filter: blur(1rem);
+}
+
+.cloud2 {
+    width: 105%;
+    position: absolute;
+    bottom: 0;
+    z-index: -2000;
+    filter: blur(2rem);
+}
+
+.cloud3 {
+    width: 105%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1001;
+    filter: blur(2rem);
+}
+
+.cloud4 {
+    width: 105%;
+    position: absolute;
+    bottom: 0;
+    z-index: -2000;
+    filter: blur(2rem);
+}
+
+/* INTRO */
+
+.intro {
+    background-color: #a2d9ff;
+    position: relative;
+    /* padding-top: 50px; Pushes it down */
+    z-index: 10;
+}
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    text-align: center;
+    max-width: 100%; /* Ensure it doesn't exceed */
+}
+
+.title-img {
+    max-width: 100%;
+    filter: brightness(1.1);
+}
+
+.metier {
+    max-width: 70%;
+    filter: brightness(1.1);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    position: relative;
+    max-width: 100%; /* Prevents overflow */
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    opacity: 100%;
+    overflow-x: hidden; /* Added to prevent content overflow */
+}
+
+
+.hero-title .cta-btn {
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    max-width: 150px;
+    z-index: 1000;
+}
+
+.hero-title h1 {
+    font-size: 3rem;
+    z-index: 1000;
+}
+
+.etoiles {
+    max-width: 50%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    max-width: 100%; /* Ensuring no overflow */
+    z-index: 1000;
+}
+
+.cta-btn {
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+    z-index: 1000;
+    transition: transform 0.3s ease-in;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    background-color: var(--highlight);
+}
+
+.hero-img {
+    max-width: 50%;
+    border-radius: 50%;
+    z-index: 1000;
+    transform: scaleX(-1);
+}
+
+.presentation {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin-top: 100px;
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+p {
+    padding: 20px;
+    max-width: 70%;
+    margin: 0 auto;
+}
