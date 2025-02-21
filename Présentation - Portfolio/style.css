@@ -119,3 +119,9 @@ a {
 a:hover {
     transform: translateY(-5px);
 }
+
+@media (max-width: 600px) {
+    .vue-ordinateur {
+        max-width: 80%;
+    }
+}
