@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réflexologie</title>
+    <link rel="stylesheet" href="./pages-style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="menu">
+                <div class="full_logo">
+                    <a href="./index.html">
+                        <img src="./logo.webp" alt="" class="logo">
+                      </a>                    <!-- <div class="title_logo">
+                        <h1>Stéphanie Herranz</h1>
+                        <h2>Réflexologie</h2>
+                    </div> -->
+                </div>
+                <ul class="desktop-nav">
+                    <li><a href="index.html#les_bienfaits">Découvrir la réflexologie</a></li>
+                    <li><a href="index.html#qui_suis_je">Qui suis-je ?</a></li>
+                    <li><a href="index.html#contact">Où nous trouver ?</a></li>
+                    <li><a href="https://perfactive.fr/sh-reflexologie/stephanie-herranz/book" class="btn">Prendre RDV</a></li>
+                </ul>
+
+                <button class="menu-toggle">Menu</button>
+                <div class="dropdown-menu">
+                <ul>
+                    <li><a href="index.html#les_bienfaits">Les Bienfaits</a></li>
+                    <li><a href="index.html#qui_suis_je">Qui suis-je ?</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="https://perfactive.fr/sh-reflexologie/stephanie-herranz/book">Prendre RDV</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <h1 id="title">Réflexologie</h1>
+        <hr>
+        <div class="main-body">
+            <div class="body-title">
+                <h2>En quoi cela consiste ?</h2>
+        <p id="text-page">La réflexologie plantaire est une technique ancestrale chinoise qui repose sur le principe selon lequel chaque zone réflexe du pied correspond à un organe ou une partie spécifique du corps. En appliquant une pression précise sur ces zones, le réflexologue stimule les points réflexes pour favoriser l’équilibre énergétique et le bien-être global du corps.</p>
+        <hr>
+        <h2>Quels sont les bienfaits ?</h2>
+        <p id="text-page">Cette pratique permet de soulager le stress, d’améliorer la circulation sanguine et lymphatique, de détendre les muscles, de réduire les tensions, et de favoriser le processus naturel de guérison du corps. Elle peut également aider à soulager divers maux tels que les maux de tête, les troubles digestifs, les douleurs menstruelles, et à renforcer le système immunitaire.</p>
+        <hr>
+        <div class="tarifs">
+        <div class="duration">
+            <img src="./clock.svg" alt="">
+            <h3>1h</h3>
+        </div>
+        <div class="cost">
+            <img src="./payment.svg" alt="">
+            <h3>50€</h3>
+        </div>
+        </div>
+        </div>
+        <img src="./physical-therapy.jpg" alt="" id="img-page">
+        </div>
+    </main>
+
+    <section class="action-btn">
+        <div class="btn-page-principale">
+            <a href="./index.html#dropdown" class="btn-retour">Retour aux Spécialités</a>
+            <a href="https://perfactive.fr/sh-reflexologie/stephanie-herranz/book" class="cta">Prendre RDV</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-body">
+            <img src="./logo.webp" alt="" class="logo-footer">
+            <div class="info">
+                <h5>07 66 49 09 60</h5>
+                <h5>contact.herranz@gmail.com</h5>
+                <h5>18 rue de la République
+                    31550 Cintegabelle</h5>
+                    <div class="legal-info">
+                <a href="./mentions-legales.html" id="mentions-legales">Mentions Légales</a>
+                </div>
+                <h6>Site produit par <a href="mailto:alexanderbell@live.com">AlexBellal </a></h6>
+            </div>
+            <a href="https://perfactive.fr/sh-reflexologie/stephanie-herranz/book" class="cta">Prendre RDV</a>
+            <!-- <div class="reseaux_sociaux"></div> -->
+            </div>
+    
+            <div class="footer-body-responsive">
+                <div class="footer-top">
+                <div class="info">
+                    <h5>07 66 49 09 60</h5>
+                    <h5>contact.herranz@gmail.com</h5>
+                    <h5>18 rue de la République
+                        31550 Cintegabelle</h5>
+                    <a href="./mentions-legales.html" id="mentions-legales">Mentions Légales</a>
+                </div>
+                <a href="https://perfactive.fr/sh-reflexologie/stephanie-herranz/book" class="cta">Prendre RDV</a>
+                </div>
+                <img src="./logo.webp" alt="" class="logo-footer">
+                <h6>Site produit par <a href="mailto:alexanderbell@live.com">AlexBellal </a></h6>
+            </div>
+        </footer>
+
+    <script>
+
+        // MENU TOGGLE
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();  // Prevent event from propagating immediately
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!menuToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.style.display = 'none';
+        }
+    });
+
+    // Close dropdown when clicking on a link inside it
+    dropdownMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            dropdownMenu.style.display = 'none';
+        });
+    });
+});
+
+       
+   </script>
+
+</body>
+</html>
