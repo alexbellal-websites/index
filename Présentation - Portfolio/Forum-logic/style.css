@@ -781,7 +781,7 @@ input:checked + .slider:before {
 }
 
 
-  @media (width: 375px) {
+  @media (width: 550px) {
 
     .cards {
       width: 100%;
