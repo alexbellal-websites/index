@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>Forum logic</title>
+</head>
+
+<body>
+
+    <div id="background-overlay"></div>
+
+    <nav>
+    <button class="switch-dark-mode"><img id="theme-icon" src="sun.svg"></button>
+    </nav>
+
+    <main>
+
+      <!-- MENU BUTTON -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="menu-access" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <section class="menu">
+        <div class="menu-items">
+          <!-- HOME BUTTON -->
+          <a href="#" class="menu-el"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="none">
+            <path fill="var(--accent)" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>Home</a>
+          <!-- FAVORITES BUTTON -->
+          <a href="#" class="menu-el"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="none">
+            <path fill="var(--accent)" d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+          </svg>Favorites</a>
+          <!-- SETTINGS BUTTON -->
+          <a href="settings.html" class="menu-el"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.2a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.2a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.4 1z"/>
+          </svg>Settings</a>
+          <!-- LOGOUT BUTTON -->
+          <a href="#" class="menu-el"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>Logout</a>
+          <!-- LOCK BUTTON -->
+           <div class="unlock">
+          <label class="switch">
+            <input type="checkbox" id="menu-switch">
+            <span class="slider round"></span>
+          </label>
+          <span id="menu-switch-label" class="menu-lock-icon">Unlock</span>
+        </div>
+        </div>
+      </section>
+
+      <!-- POSTS SECTION -->
+
+        <div class="post-published">
+            <h5>Your post has successfully been published</h5>
+        </div>
+        
+        <div class="cards">
+        <div class="card-pre">
+
+            <div class="card-title">
+                <div class="profil">P</div>
+                <h1 class="fullname">Paul Destaing</h1>
+            </div>
+
+            <div class="card-body-pre">
+                <textarea name="input" placeholder="Share some thoughts…!" id="input"></textarea>
+                <div class="action-btns">
+                    <button id="draft-btn">Draft</button>
+                    <button id="send-btn" class="send-btn">Send</button>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="cards-posted">
+
+
+        <!-- <div class="card-post">
+
+            <div class="card-title" data-id="default-post">
+                <div class="profil">P</div>
+                <h1 class="fullname">Paul Destaing</h1>
+            </div>
+
+            <div class="card-body-post">
+        
+                <p id="comment-posted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, alias quasi. Hic possimus accusantium omnis. Eum, soluta blanditiis. Modi exercitationem quasi nobis deserunt harum hic iste voluptas qui esse veniam.</p>
+                <div class="voting-btns">
+                  <h6>Likes : </h6>
+                    <button class="upvote">0</button>
+                    <h6>Dislikes : </h6>
+                    <button class="downvote">0</button>
+                    <h6>Comment</h6>
+                    <a href="#"><img src="./chat_bubble.svg" class="comment-icon"></a>
+                </div>
+
+                <div class="response-posted" data-id="${id}">
+                  <div class="comment-section-card">
+                    <textarea name="comment-section" class="comment-section" placeholder="Say something"></textarea>
+                    <button class="send-comment-btn">Send</button>
+                  </div> -->
+
+
+                  <!-- DEFAULT CARD POST TEST -->
+                   
+                <!-- <div class="response-posted" data-id="${id}">
+                  <div class="responses-container"></div>
+
+                  <div class="response-card">
+                    <div class="response-title">
+                      <div class="profil">P</div>
+                      <h1 class="fullname-response">Paul Destaing</h1>
+                    </div>
+                  <div class="response-body">
+                    <p class="response">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure quasi vero sunt in neque facilis quis, asperiores repellendus expedita odit mollitia illo. Quaerat molestiae, eligendi aliquid labore esse facilis laboriosam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eos tempore asperiores. Commodi cum, ratione facilis animi veritatis quaerat deserunt. Amet vel, dolores dignissimos doloribus in voluptate natus accusantium iure?</p>
+                    <div class="like-comment">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"     stroke-linecap="round" stroke-linejoin="round" class="like-icon">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                              C2 5.42 4.42 3 7.5 3
+                              C9.24 3 10.91 3.81 12 5.08
+                              C13.09 3.81 14.76 3 16.5 3
+                              C19.58 3 22 5.42 22 8.5
+                              C22 12.28 18.6 15.36 13.45 19.54L12 21.35z"/>
+                      </svg> 
+                      <h6 class="like-comment-counter">0</h6>
+                    </div>
+                  </div>                
+                </div>
+              </div>
+                <div class="response-footer">
+                  <button class="respond-btn">Respond?</button>
+                </div> -->
+
+                
+            </div>
+            </div>
+        </section>
+
+        </div>
+    </main>
+
+
+    
+</body>
+</html>
