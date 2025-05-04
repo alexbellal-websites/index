@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>Forum logic</title>
+</head>
+
+<body>
+
+    <div id="background-overlay"></div>
+
+    <nav>
+    <button class="switch-dark-mode"><img id="theme-icon" src="sun.svg"></button>
+    </nav>
+
+    <main>
+
+      <!-- MENU BUTTON -->
+      <button class="menu-access" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      
+      <section class="menu">
+        <div class="menu-items">
+          <!-- HOME BUTTON -->
+          <a href="#" class="menu-el"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="none">
+            <path fill="var(--accent)" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>Home</a>
+          <!-- FAVORITES BUTTON -->
+          <a href="#" class="menu-el"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="none">
+            <path fill="var(--accent)" d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+          </svg>Favorites</a>
+          <!-- SETTINGS BUTTON -->
+          <a href="settings.html" class="menu-el"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.2a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.2a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.4 1z"/>
+          </svg>Settings</a>
+          <!-- LOGOUT BUTTON -->
+          <a href="#" class="menu-el"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>Logout</a>
+          <!-- LOCK BUTTON -->
+           <div class="unlock">
+          <label class="switch">
+            <input type="checkbox" id="menu-switch">
+            <span class="slider round"></span>
+          </label>
+          <span id="menu-switch-label" class="menu-lock-icon">Unlock</span>
+        </div>
+        </div>
+      </section>
+
+      <!-- POSTS SECTION -->
+
+        <div class="post-published">
+            <h5>Post published</h5>
+        </div>
+        
+        <section class="cards-posted"></section>
+
+        <div class="cards">
+        <div class="card-pre">
+
+            <div class="card-title">
+                <div class="profil">P</div>
+                <h1 class="fullname">Username</h1>
+            </div>
+
+            <div class="card-body-pre">
+                <textarea name="input" placeholder="Type here" id="input"></textarea>
+                <div class="action-btns">
+                    <button id="draft-btn">Draft</button>
+                    <button id="send-btn" class="send-btn">Send</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        </div>
+    </main>
+
+
+    
+</body>
+</html>
