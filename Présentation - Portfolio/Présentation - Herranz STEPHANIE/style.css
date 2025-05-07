@@ -787,7 +787,7 @@ nav a:hover {
     font-size: 2rem;
     margin-top: 10px;
     max-width: 350px;
-    text-align: justify;
+    text-align: start;
 }
 
 
