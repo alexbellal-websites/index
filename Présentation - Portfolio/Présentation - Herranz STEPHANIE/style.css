@@ -720,7 +720,6 @@ nav a:hover {
     gap: 10px;
     background-color: var(--bg-color);
     padding: 70px 100px;
-    width: 60%;
 }
 
 .card-review {
