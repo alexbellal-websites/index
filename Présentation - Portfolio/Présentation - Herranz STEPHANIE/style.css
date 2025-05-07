@@ -725,7 +725,6 @@ nav a:hover {
 .card-review {
     gap: 5px;
     box-shadow: 0 5px 15px rgba(31, 72, 255, 0.1);
-
     padding: 20px;
     border-radius: 20px;
     margin: 10px;
@@ -785,6 +784,7 @@ nav a:hover {
 
 
 .review-text {
+    font-size: 2rem;
     margin-top: 10px;
     max-width: 350px;
     text-align: justify;
